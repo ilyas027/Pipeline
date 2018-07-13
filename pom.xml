@@ -19,7 +19,7 @@
        <repository>
          <id>internal.repo</id>
          <name>Internal repo</name>
-         <url>/Users/Izaan/pipe_repo</url>
+         <url>file:///Users/Izaan/pipe_repo</url>
        </repository>
    </distributionManagement>
 </project>
