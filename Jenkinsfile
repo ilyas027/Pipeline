@@ -20,7 +20,9 @@ pipeline{
 		}
 		
 		stage ('Deployment stage') {
+                steps {
 			nexusPublisher nexusInstanceId: 'localnexus', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'war/target/jenkins.war']], mavenCoordinate: [artifactId: 'jenkins-war', groupId: 'org.jenkins-ci.main', packaging: 'war', version: '3.13']]]
+                       }
 			
 		}
 	
